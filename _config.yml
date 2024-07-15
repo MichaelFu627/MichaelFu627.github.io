@@ -12,7 +12,7 @@ title                    : "Xianglong Fu's Personal Homepage"
 title_separator          : "-"
 name                     : &name "Xianglong Fu"
 description              : &description "personal description"
-url                      : https://MichaelFu627.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://MichaelFu627.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "MichaelFu627/MichaelFu627.github.io"
 
@@ -57,7 +57,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : xianglong-fu-267849252
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
