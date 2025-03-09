@@ -24,11 +24,12 @@ author:
   avatar           : "profile.png"
   name             : "Xianglong Fu"
   pronouns         : # example: "she/her"  
-  bio              : "UWO B.Sc Statistics"
+  bio              : "UWO B.Sc Statistics\"
+                     "Unimelb Master of Data Science. Specialized in Statistics"
   location         : "London, Ontario"
-  employer         : "Western University"
+  employer         : "University of Melbourne"
   uri              : # URL
-  email            : "xfu84@uwo.ca" 
+  email            : "xianglongf@student.unimelb.edu.au" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
