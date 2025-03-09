@@ -21,7 +21,7 @@ repository               : "MichaelFu627/MichaelFu627.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpeg"
   name             : "Xianglong Fu"
   pronouns         : # example: "she/her"  
   bio              : "Unimelb Master of Data Science. Specialized in Statistics"
