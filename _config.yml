@@ -24,8 +24,7 @@ author:
   avatar           : "profile.png"
   name             : "Xianglong Fu"
   pronouns         : # example: "she/her"  
-  bio              : "UWO B.Sc Statistics\"
-                     "Unimelb Master of Data Science. Specialized in Statistics"
+  bio              : "Unimelb Master of Data Science. Specialized in Statistics"
   location         : "Melbourne, Victoria, Australia"
   employer         : "University of Melbourne"
   uri              : # URL
