@@ -11,35 +11,26 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Biostatistics, 2027-2030 (expected)
+* Master of Data Science, University of Melbourne, 2025 - 2027
+* B.Sc in Applied Statistics, University of Western Ontario, 2020 - 2024
 
-Work experience
+Research Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Spring 2024: Research Assistant (Internship)
+  * University of Western Ontario
+  * Duties: Developing the maximum likelihood estimation algorithm and programming for the correlation between two brain activity patterns.
+  * Supervisor: Dr. Jorn Diedrichsen, Western Institute of Neuroscience
+                Dr. Simon Bonner, Department of Actuarial and Statistical Sciences
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
   
-Skills
+Programming Languages
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* R
+* Python
+* SQL
+* Java
+* LATEX
 
 Publications
 ======
