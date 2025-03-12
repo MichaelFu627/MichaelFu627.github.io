@@ -20,7 +20,7 @@ Research Experience
 * Spring 2024: Research Assistant (Internship)
   * University of Western Ontario
   * Duties: Developing the maximum likelihood estimation algorithm and programming for the correlation between two brain activity patterns.
-  * Supervisor: Dr. Jorn Diedrichsen, Western Institute of Neuroscience
+  * Supervisor: Dr. Jorn Diedrichsen, Western Institute of Neuroscience \\
                 Dr. Simon Bonner, Department of Actuarial and Statistical Sciences
 
   
