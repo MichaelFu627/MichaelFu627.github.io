@@ -1,0 +1,69 @@
+# ============================================================================
+#  Decap CMS configuration — this is what powers the /admin editor.
+#  Pick ONE backend below depending on where you host (see README.md).
+# ============================================================================
+
+# --- Backend A: Netlify (easiest — recommended) ---------------------------
+# Host the site on Netlify, enable Identity + Git Gateway in the dashboard,
+# and this block "just works": log in with email, write, publish.
+backend:
+  name: git-gateway
+  branch: main
+
+# --- Backend B: GitHub Pages -----------------------------------------------
+# If you deploy to MichaelFu627.github.io instead, comment out the block above
+# and use this one. It needs a one-time OAuth app + auth proxy (see README).
+# backend:
+#   name: github
+#   repo: MichaelFu627/MichaelFu627.github.io
+#   branch: main
+#   base_url: https://your-oauth-proxy.example.com   # your auth proxy URL
+
+# Where images you upload in the editor are stored / linked from.
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Optional: edit drafts on a branch and review before publishing.
+publish_mode: editorial_workflow
+
+collections:
+  # -------------------------------------------------------------------------
+  - name: "blog"
+    label: "Blog posts"
+    label_singular: "Post"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    sortable_fields: ["pubDate", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short description", name: "description", widget: "text", required: false }
+      - { label: "Date", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Draft (hide from site)", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # -------------------------------------------------------------------------
+  - name: "projects"
+    label: "Projects"
+    label_singular: "Project"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    sortable_fields: ["order", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Badge (e.g. NeurIPS 2024, From Scratch)", name: "venue", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "number", required: false, value_type: "int" }
+      - { label: "Teaser image", name: "image", widget: "image", required: false }
+      - { label: "Sub-line (stack / collaborators)", name: "authors", widget: "string", required: false }
+      - label: "Links"
+        name: "links"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+      - { label: "Order (lower shows first)", name: "order", widget: "number", default: 99, value_type: "int" }
+      - { label: "Feature on homepage", name: "featured", widget: "boolean", default: false }
+      - { label: "Description (bullet points)", name: "body", widget: "markdown" }

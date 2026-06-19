@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout title="Projects — Xianglong Fu">
+  <header class="pt-24 pb-4">
+    <div class="font-mono text-[13px] font-bold text-blue tracking-wide">// SELECTED WORK</div>
+    <h1 class="font-display font-bold text-ink text-[clamp(34px,5vw,52px)] mt-2 tracking-tight">Projects</h1>
+    <p class="max-w-[58ch] mt-4 text-body">Systems I built end to end — mostly from first principles, because that's how I learn how they actually work.</p>
+  </header>
+
+  <section class="pb-8">
+    {projects.map(async (p) => {
+      const { Content } = await p.render();
+      return (
+        <ProjectCard title={p.data.title} venue={p.data.venue} image={p.data.image} authors={p.data.authors} links={p.data.links}>
+          <Content />
+        </ProjectCard>
+      );
+    })}
+  </section>
+</BaseLayout>

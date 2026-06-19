@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+type Props = { post: CollectionEntry<'blog'> };
+const { post } = Astro.props;
+const { Content } = await post.render();
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+---
+<BaseLayout title={`${post.data.title} — Xianglong Fu`} description={post.data.description}>
+  <article class="pt-24 pb-10 max-w-[680px] mx-auto">
+    <a href="/blog" class="font-mono text-[13px] text-blue hover:underline underline-offset-4">← all posts</a>
+    <h1 class="font-display font-bold text-ink text-[clamp(30px,4.5vw,44px)] leading-tight tracking-tight mt-5">{post.data.title}</h1>
+    <div class="flex flex-wrap items-center gap-3 mt-4 font-mono text-[13px] text-muted">
+      <span>{fmt(post.data.pubDate)}</span>
+      {post.data.tags.map((t) => (
+        <span class="text-blue border border-line rounded-full px-2.5 py-0.5">#{t}</span>
+      ))}
+    </div>
+    <div class="prose prose-slate max-w-none mt-9 prose-headings:font-display prose-headings:text-ink prose-a:text-blue prose-strong:text-ink prose-code:text-blue-deep prose-code:bg-blue-soft prose-code:px-1 prose-code:rounded prose-code:before:content-none prose-code:after:content-none prose-pre:bg-ink prose-pre:text-slate-100">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+const links = [
+  { label: 'About', href: '/#about' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Blog', href: '/blog' },
+];
+---
+<nav class="sticky top-0 z-40 border-b border-line bg-white/80 backdrop-blur">
+  <div class="mx-auto max-w-content px-7 h-16 flex items-center justify-between">
+    <a href="/" class="font-mono font-bold text-ink text-[15px]">xianglong<span class="text-blue">.dev</span></a>
+    <div class="hidden sm:flex gap-7 font-mono text-sm">
+      {links.map((l) => (
+        <a href={l.href} class="text-ink font-medium hover:text-blue transition-colors">{l.label}</a>
+      ))}
+    </div>
+  </div>
+</nav>

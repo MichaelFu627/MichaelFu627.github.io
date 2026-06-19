@@ -1,0 +1,44 @@
+---
+// Academic-publication style entry: teaser figure on the left (with a venue
+// badge in the corner), title + sub-line + link buttons + bullet body on the right.
+export interface Props {
+  title: string;
+  venue?: string;
+  image?: string;
+  authors?: string;
+  links?: { label: string; url: string }[];
+}
+const { title, venue = '', image = '/uploads/placeholder.svg', authors = '', links = [] } = Astro.props;
+---
+<article class="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 py-9 border-t border-line">
+  <!-- teaser figure -->
+  <div class="relative rounded-lg overflow-hidden border border-line bg-blue-soft self-start">
+    {venue && (
+      <span class="absolute top-0 left-0 font-mono text-[11px] font-medium text-white bg-blue px-2.5 py-1 rounded-br-lg z-10">
+        {venue}
+      </span>
+    )}
+    <img src={image} alt={title} loading="lazy" class="w-full h-auto block aspect-[16/10] object-cover" />
+  </div>
+
+  <!-- details -->
+  <div>
+    <h3 class="font-display font-semibold text-ink text-[19px] leading-snug">{title}</h3>
+    {authors && <p class="text-sm text-body mt-1">{authors}</p>}
+
+    {links.length > 0 && (
+      <div class="flex flex-wrap gap-x-4 gap-y-2 mt-3">
+        {links.map((l) => (
+          <a href={l.url} target="_blank" rel="noopener"
+             class="font-mono text-[13px] font-medium text-blue hover:text-blue-deep hover:underline underline-offset-4">
+            {l.label} ↗
+          </a>
+        ))}
+      </div>
+    )}
+
+    <div class="prose prose-sm max-w-none mt-3 text-body prose-li:my-0.5 prose-strong:text-ink prose-a:text-blue prose-a:no-underline hover:prose-a:underline">
+      <slot />
+    </div>
+  </div>
+</article>
