@@ -13,6 +13,24 @@ const featured = projects.filter((p) => p.data.featured).slice(0, 2);
 
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
+
+// Education — edit these entries directly.
+const education = [
+  {
+    degree: 'Master of Data Science',
+    school: 'University of Melbourne',
+    location: 'Melbourne, Australia',
+    period: '2025 — 2026',
+    note: 'Expected Dec 2026. Coursework across machine learning, statistical modelling, and high-performance computing.',
+  },
+  {
+    degree: 'B.Sc. in Applied Statistics',
+    school: 'Western University',
+    location: 'London, Ontario, Canada',
+    period: '20XX — 20XX',
+    note: 'Foundations in probability, statistical inference, and data analysis.',
+  },
+];
 ---
 <BaseLayout>
   <!-- hero -->
@@ -65,6 +83,26 @@ const fmt = (d: Date) =>
       <a href="/projects" class="inline-flex items-center gap-2 font-mono text-sm text-blue font-medium mt-7 hover:gap-3 transition-all">All projects →</a>
     </section>
   )}
+
+  <!-- education -->
+  <section id="education" class="pt-16">
+    <div class="font-mono text-[13px] font-bold text-blue tracking-wide">// EDUCATION</div>
+    <h2 class="font-display font-bold text-ink text-[clamp(26px,3.4vw,34px)] mt-2 mb-6 tracking-tight">
+      Education <span class="font-mono font-normal text-muted">&#x1F393;</span>
+    </h2>
+    <div class="flex flex-col">
+      {education.map((e) => (
+        <div class="grid grid-cols-1 md:grid-cols-[150px_1fr] gap-x-6 gap-y-1 py-6 border-t border-line">
+          <span class="font-mono text-[13px] text-muted pt-1">{e.period}</span>
+          <div class="border-l-2 border-blue pl-5">
+            <h3 class="font-display font-semibold text-ink text-[19px] leading-snug">{e.degree}</h3>
+            <p class="text-body text-[15px] mt-0.5">{e.school} · <span class="text-muted">{e.location}</span></p>
+            {e.note && <p class="text-sm text-body mt-2 max-w-[58ch]">{e.note}</p>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
 
   <!-- recent blog -->
   {recentPosts.length > 0 && (
