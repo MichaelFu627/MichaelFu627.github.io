@@ -2,7 +2,8 @@
 title: "AlexNet from first principles"
 venue: "From Scratch"
 year: 2026
-image: "/uploads/placeholder.svg"
+image: "/uploads/alexnet.png"
+url: "https://github.com/MichaelFu627"
 authors: "Pure NumPy · Three.js · CNN"
 links:
   - { label: "Code", url: "https://github.com/MichaelFu627" }

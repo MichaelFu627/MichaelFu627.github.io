@@ -5,10 +5,12 @@ export interface Props {
   title: string;
   venue?: string;
   image?: string;
+  url?: string;
   authors?: string;
   links?: { label: string; url: string }[];
 }
-const { title, venue = '', image = '/uploads/placeholder.svg', authors = '', links = [] } = Astro.props;
+const { title, venue = '', image = '/uploads/placeholder.svg', url = '', authors = '', links = [] } = Astro.props;
+const imageClass = 'w-full h-auto block aspect-[16/10] object-cover transition duration-300';
 ---
 <article class="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 py-9 border-t border-line">
   <!-- teaser figure -->
@@ -18,12 +20,26 @@ const { title, venue = '', image = '/uploads/placeholder.svg', authors = '', lin
         {venue}
       </span>
     )}
-    <img src={image} alt={title} loading="lazy" class="w-full h-auto block aspect-[16/10] object-cover" />
+    {url ? (
+      <a href={url} target="_blank" rel="noopener" class="block" aria-label={`${title} main link`}>
+        <img src={image} alt={title} loading="lazy" class={`${imageClass} hover:scale-[1.02] hover:opacity-90`} />
+      </a>
+    ) : (
+      <img src={image} alt={title} loading="lazy" class={imageClass} />
+    )}
   </div>
 
   <!-- details -->
   <div>
-    <h3 class="font-display font-semibold text-ink text-[19px] leading-snug">{title}</h3>
+    <h3 class="font-display font-semibold text-ink text-[19px] leading-snug">
+      {url ? (
+        <a href={url} target="_blank" rel="noopener" class="transition-colors hover:text-blue">
+          {title}
+        </a>
+      ) : (
+        title
+      )}
+    </h3>
     {authors && <p class="text-sm text-body mt-1">{authors}</p>}
 
     {links.length > 0 && (

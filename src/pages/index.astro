@@ -65,27 +65,8 @@ const education = [
     </div>
   </header>
 
-  <!-- featured projects -->
-  {featured.length > 0 && (
-    <section class="pt-12">
-      <div class="font-mono text-[13px] font-bold text-blue tracking-wide">// FEATURED</div>
-      <h2 class="font-display font-bold text-ink text-[clamp(26px,3.4vw,34px)] mt-2 mb-2 tracking-tight">
-        Selected projects <span class="font-mono font-normal text-muted">{'{ }'}</span>
-      </h2>
-      {featured.map(async (p) => {
-        const { Content } = await p.render();
-        return (
-          <ProjectCard title={p.data.title} venue={p.data.venue} image={p.data.image} authors={p.data.authors} links={p.data.links}>
-            <Content />
-          </ProjectCard>
-        );
-      })}
-      <a href="/projects" class="inline-flex items-center gap-2 font-mono text-sm text-blue font-medium mt-7 hover:gap-3 transition-all">All projects →</a>
-    </section>
-  )}
-
   <!-- education -->
-  <section id="education" class="pt-16">
+  <section id="education" class="pt-12">
     <div class="font-mono text-[13px] font-bold text-blue tracking-wide">// EDUCATION</div>
     <h2 class="font-display font-bold text-ink text-[clamp(26px,3.4vw,34px)] mt-2 mb-6 tracking-tight">
       Education <span class="font-mono font-normal text-muted">&#x1F393;</span>
@@ -103,6 +84,25 @@ const education = [
       ))}
     </div>
   </section>
+
+  <!-- featured projects -->
+  {featured.length > 0 && (
+    <section class="pt-12">
+      <div class="font-mono text-[13px] font-bold text-blue tracking-wide">// FEATURED</div>
+      <h2 class="font-display font-bold text-ink text-[clamp(26px,3.4vw,34px)] mt-2 mb-2 tracking-tight">
+        Selected projects <span class="font-mono font-normal text-muted">{'{ }'}</span>
+      </h2>
+      {featured.map(async (p) => {
+        const { Content } = await p.render();
+        return (
+          <ProjectCard title={p.data.title} venue={p.data.venue} image={p.data.image} url={p.data.url} authors={p.data.authors} links={p.data.links}>
+            <Content />
+          </ProjectCard>
+        );
+      })}
+      <a href="/projects" class="inline-flex items-center gap-2 font-mono text-sm text-blue font-medium mt-7 hover:gap-3 transition-all">All projects →</a>
+    </section>
+  )}
 
   <!-- recent blog -->
   {recentPosts.length > 0 && (

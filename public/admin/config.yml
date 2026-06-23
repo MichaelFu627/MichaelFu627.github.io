@@ -56,6 +56,7 @@ collections:
       - { label: "Badge (e.g. NeurIPS 2024, From Scratch)", name: "venue", widget: "string", required: false }
       - { label: "Year", name: "year", widget: "number", required: false, value_type: "int" }
       - { label: "Teaser image", name: "image", widget: "image", required: false }
+      - { label: "Main link (URL)", name: "url", widget: "string", required: false }
       - { label: "Sub-line (stack / collaborators)", name: "authors", widget: "string", required: false }
       - label: "Links"
         name: "links"

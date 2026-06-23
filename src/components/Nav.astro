@@ -8,7 +8,10 @@ const links = [
 ---
 <nav class="sticky top-0 z-40 border-b border-line bg-white/80 backdrop-blur">
   <div class="mx-auto max-w-content px-7 h-16 flex items-center justify-between">
-    <a href="/" class="font-mono font-bold text-ink text-[15px]">xianglong<span class="text-blue">.dev</span></a>
+    <a href="/" class="inline-flex items-baseline gap-2 text-ink hover:text-blue transition-colors" aria-label="Xianglong Fu home">
+      <span class="font-sign text-[25px] leading-none tracking-normal">付相龙</span>
+      <span class="hidden sm:inline font-mono text-[11px] text-muted">xianglong.dev</span>
+    </a>
     <div class="hidden sm:flex gap-7 font-mono text-sm">
       {links.map((l) => (
         <a href={l.href} class="text-ink font-medium hover:text-blue transition-colors">{l.label}</a>

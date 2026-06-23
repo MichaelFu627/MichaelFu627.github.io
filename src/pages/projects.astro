@@ -16,7 +16,7 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
     {projects.map(async (p) => {
       const { Content } = await p.render();
       return (
-        <ProjectCard title={p.data.title} venue={p.data.venue} image={p.data.image} authors={p.data.authors} links={p.data.links}>
+        <ProjectCard title={p.data.title} venue={p.data.venue} image={p.data.image} url={p.data.url} authors={p.data.authors} links={p.data.links}>
           <Content />
         </ProjectCard>
       );

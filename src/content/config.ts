@@ -20,6 +20,8 @@ const projects = defineCollection({
     year: z.number().optional(),
     // teaser image path, e.g. "/uploads/lenet.png"
     image: z.string().default('/uploads/placeholder.svg'),
+    // main click target for the project card image/title
+    url: z.string().optional(),
     // sub-line under the title, e.g. tech stack or collaborators
     authors: z.string().default(''),
     // link buttons: [{ label: "Code", url: "https://..." }, ...]

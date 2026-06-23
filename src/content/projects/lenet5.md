@@ -2,7 +2,8 @@
 title: "LeNet-5, hand-written in NumPy"
 venue: "From Scratch"
 year: 2026
-image: "/uploads/placeholder.svg"
+image: "/uploads/lenet5.png"
+url: "https://huggingface.co/spaces/MichaelFu627/lenet5"
 authors: "Pure NumPy · Three.js · Docker · Hugging Face Spaces"
 links:
   - { label: "Live demo", url: "https://huggingface.co/spaces/MichaelFu627/lenet5" }

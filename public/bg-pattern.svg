@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420">
+  <defs>
+    <style>
+      .ink { stroke: #0F172A; fill: none; opacity: 0.055; }
+      .blue { stroke: #2563EB; fill: none; opacity: 0.06; }
+      .text-ink { fill: #0F172A; opacity: 0.055; font-family: "JetBrains Mono", ui-monospace, monospace; }
+      .text-blue { fill: #2563EB; opacity: 0.06; font-family: "JetBrains Mono", ui-monospace, monospace; }
+    </style>
+  </defs>
+
+  <!-- normal distribution -->
+  <g transform="translate(28 32)">
+    <path class="ink" stroke-width="2" d="M0 82H142" />
+    <path class="blue" stroke-width="2.4" d="M6 82C27 82 35 78 45 58C55 35 64 14 78 14C92 14 101 35 111 58C121 78 129 82 150 82" />
+    <path class="ink" stroke-width="1.4" d="M78 14V88" stroke-dasharray="4 5" />
+    <text class="text-blue" x="35" y="108" font-size="18">N(mu,sigma)</text>
+  </g>
+
+  <!-- Gaussian PDF formula -->
+  <g transform="translate(166 35)">
+    <text class="text-ink" x="0" y="0" font-size="17">f(x)=1/(σ√(2π))</text>
+    <text class="text-blue" x="26" y="27" font-size="17">e</text>
+    <text class="text-blue" x="42" y="18" font-size="12">−(x−μ)²/2σ²</text>
+  </g>
+
+  <!-- neural network -->
+  <g transform="translate(236 112)">
+    <g class="ink" stroke-width="1.2">
+      <path d="M0 0L64 18M0 0L64 58M0 0L64 98M0 40L64 18M0 40L64 58M0 40L64 98M0 80L64 18M0 80L64 58M0 80L64 98" />
+      <path d="M64 18L128 38M64 18L128 78M64 58L128 38M64 58L128 78M64 98L128 38M64 98L128 78" />
+      <path d="M128 38L176 58M128 78L176 58" />
+    </g>
+    <g fill="#2563EB" opacity="0.06">
+      <circle cx="0" cy="0" r="7" /><circle cx="0" cy="40" r="7" /><circle cx="0" cy="80" r="7" />
+      <circle cx="64" cy="18" r="7" /><circle cx="64" cy="58" r="7" /><circle cx="64" cy="98" r="7" />
+      <circle cx="128" cy="38" r="7" /><circle cx="128" cy="78" r="7" />
+      <circle cx="176" cy="58" r="7" />
+    </g>
+  </g>
+
+  <!-- symbols and matrix brackets -->
+  <text class="text-blue" x="38" y="214" font-size="44">Σ</text>
+  <text class="text-ink" x="97" y="214" font-size="44">∫</text>
+  <g transform="translate(20 252)">
+    <path class="ink" stroke-width="2" d="M18 0H0V88H18M86 0H104V88H86" />
+    <g class="text-ink" font-size="16">
+      <text x="28" y="25">1  0</text>
+      <text x="28" y="60">0  1</text>
+    </g>
+  </g>
+
+  <!-- scatterplot and regression line -->
+  <g transform="translate(174 262)">
+    <path class="ink" stroke-width="2" d="M0 108V0M0 108H166" />
+    <path class="blue" stroke-width="2.2" d="M12 93L154 18" />
+    <g fill="#0F172A" opacity="0.055">
+      <circle cx="18" cy="88" r="4" /><circle cx="36" cy="72" r="4" /><circle cx="52" cy="82" r="4" />
+      <circle cx="74" cy="58" r="4" /><circle cx="94" cy="62" r="4" /><circle cx="112" cy="38" r="4" />
+      <circle cx="133" cy="46" r="4" /><circle cx="150" cy="24" r="4" />
+    </g>
+    <text class="text-blue" x="56" y="130" font-size="16">y = βx + ε</text>
+  </g>
+</svg>

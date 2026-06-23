@@ -2,7 +2,8 @@
 title: "Go (围棋) AI engine"
 venue: "RL · Search"
 year: 2026
-image: "/uploads/placeholder.svg"
+image: "/uploads/go-ai.png"
+url: "https://github.com/MichaelFu627"
 authors: "PyTorch · ResNet · PUCT/MCTS · FastAPI · Vite"
 links:
   - { label: "Code", url: "https://github.com/MichaelFu627" }

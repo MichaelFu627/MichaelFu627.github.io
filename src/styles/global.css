@@ -14,14 +14,16 @@ body {
   overflow-x: hidden;
 }
 
-/* faint scattered code-symbol backdrop, fading out down the page */
+/* faint math/statistics backdrop, fading out down the page */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><text x='12' y='40' font-family='monospace' font-size='20' fill='%230F172A' opacity='0.05'>&lt;/&gt;</text><text x='150' y='90' font-family='monospace' font-size='20' fill='%230F172A' opacity='0.05'>%7B%7D</text><text x='60' y='130' font-family='monospace' font-size='20' fill='%230F172A' opacity='0.05'>()</text><text x='170' y='180' font-family='monospace' font-size='20' fill='%230F172A' opacity='0.05'>%2B%2B</text><text x='20' y='200' font-family='monospace' font-size='20' fill='%230F172A' opacity='0.05'>%3D%3D</text></svg>");
+  background-image: url('/bg-pattern.svg');
+  background-size: 420px 420px;
+  background-repeat: repeat;
   -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 50%, transparent 92%);
   mask-image: linear-gradient(180deg, #000 0%, #000 50%, transparent 92%);
 }

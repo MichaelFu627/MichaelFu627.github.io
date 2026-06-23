@@ -1,0 +1,27 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	modified:   public/admin/config.yml
+#	new file:   public/bg-pattern.svg
+#	new file:   public/uploads/alexnet.png
+#	new file:   public/uploads/go-ai.png
+#	new file:   public/uploads/lenet5.png
+#	new file:   public/uploads/minesweeper.png
+#	modified:   src/components/Nav.astro
+#	modified:   src/components/ProjectCard.astro
+#	modified:   src/content/config.ts
+#	modified:   src/content/projects/alexnet.md
+#	modified:   src/content/projects/go-ai.md
+#	modified:   src/content/projects/lenet5.md
+#	modified:   src/content/projects/minesweeper.md
+#	modified:   src/layouts/BaseLayout.astro
+#	modified:   src/pages/index.astro
+#	modified:   src/pages/projects.astro
+#	modified:   src/styles/global.css
+#	modified:   tailwind.config.cjs
+#

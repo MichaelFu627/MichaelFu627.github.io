@@ -2,7 +2,8 @@
 title: "Minesweeper, Windows 95 edition"
 venue: "Full-Stack"
 year: 2026
-image: "/uploads/placeholder.svg"
+image: "/uploads/minesweeper.png"
+url: "https://github.com/MichaelFu627"
 authors: "FastAPI · Vite · TypeScript"
 links:
   - { label: "Code", url: "https://github.com/MichaelFu627" }
