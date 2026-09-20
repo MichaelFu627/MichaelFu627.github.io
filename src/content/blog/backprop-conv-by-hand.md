@@ -3,7 +3,7 @@ title: "Backprop by hand: deriving convolution gradients"
 description: "Walking through the math of the convolution backward pass — the part most tutorials quietly skip."
 pubDate: 2026-06-14
 tags: ["deep-learning"]
-draft: false
+draft: true
 ---
 
 Most tutorials show you `conv2d` forward and then wave their hands at the backward

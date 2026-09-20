@@ -3,7 +3,7 @@ title: "PUCT, explained with a 9×9 Go board"
 description: "How the exploration term balances policy priors against visit counts during self-play."
 pubDate: 2026-05-28
 tags: ["search"]
-draft: false
+draft: true
 ---
 
 When I built my Go engine, the search was the part I understood least and ended

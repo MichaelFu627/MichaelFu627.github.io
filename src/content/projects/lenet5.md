@@ -1,17 +1,16 @@
 ---
-title: "LeNet-5, hand-written in NumPy"
-venue: "From Scratch"
-year: 2026
-image: "/uploads/lenet5.png"
+title: "LeNet-5 in pure NumPy"
+venue: "Deep Learning"
+image: "/uploads/lenet5.jpg"
 url: "https://huggingface.co/spaces/MichaelFu627/lenet5"
-authors: "Pure NumPy · Three.js · Docker · Hugging Face Spaces"
+authors: "NumPy · im2col + BLAS · Three.js · Hugging Face Spaces"
 links:
   - { label: "Live demo", url: "https://huggingface.co/spaces/MichaelFu627/lenet5" }
-  - { label: "Code", url: "https://github.com/MichaelFu627" }
-order: 1
-featured: true
+  - { label: "Code", url: "https://github.com/MichaelFu627/lenet5" }
+order: 4
+featured: false
 ---
 
-- A full convolutional network — convolutions, pooling, backprop, and the entire training loop — implemented in **pure NumPy** with no deep-learning framework.
-- Wrapped in an interactive **Three.js** frontend that renders the network in 3D.
-- Deployed to **Hugging Face Spaces** with Docker and Git LFS so anyone can run it in the browser.
+- A complete convolutional network — convolutions, pooling, backprop, and the full training loop — implemented in pure NumPy with no deep-learning framework. The point wasn't to replace frameworks, but to understand exactly what they do under the hood.
+- Optimized the convolutions with im2col + BLAS for an ~11× speedup; the model reaches 96.3% accuracy on MNIST.
+- Packaged with an interactive Three.js visualization and deployed to Hugging Face Spaces so anyone can explore it in the browser.

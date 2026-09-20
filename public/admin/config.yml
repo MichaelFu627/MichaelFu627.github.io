@@ -53,7 +53,7 @@ collections:
     sortable_fields: ["order", "title"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Badge (e.g. NeurIPS 2024, From Scratch)", name: "venue", widget: "string", required: false }
+      - { label: "Badge (e.g. Research, Deep Learning)", name: "venue", widget: "string", required: false }
       - { label: "Year", name: "year", widget: "number", required: false, value_type: "int" }
       - { label: "Teaser image", name: "image", widget: "image", required: false }
       - { label: "Main link (URL)", name: "url", widget: "string", required: false }

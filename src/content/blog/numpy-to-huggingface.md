@@ -3,7 +3,7 @@ title: "Shipping a NumPy model to Hugging Face Spaces"
 description: "Docker SDK Spaces, Git LFS for .npz weights, and the gotchas that cost me an evening."
 pubDate: 2026-05-02
 tags: ["mlops"]
-draft: false
+draft: true
 ---
 
 Training a model from scratch is one thing; getting it to run in a stranger's

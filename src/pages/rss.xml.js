@@ -6,7 +6,7 @@ export async function GET(context) {
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   return rss({
     title: 'Xianglong Fu — Blog',
-    description: 'Notes on building ML systems from scratch.',
+    description: 'Notes on machine learning, statistics, and shipping data systems.',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,
